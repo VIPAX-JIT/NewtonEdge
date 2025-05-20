@@ -29,7 +29,7 @@ export default function Home() {
         <div className="about-content">
           <h2 className="about-title">About Newton School</h2>
           <p className="about-description">
-            NewtonEdge is your ultimate platform for seamless access to a wealth of educational resources, specifically designed to empower students in their college studies. Whether you're diving into Data Structures, mastering Python, exploring JavaScript, or expanding your knowledge in AI and other essential subjects, NewtonEdge offers a well-organized library of video tutorials, PDF guides, and interactive content to enhance your learning experience.
+            NewtonEdge offers easy access to a wide range of educational materials tailored for college students. Whether you're exploring Data Structures, Python, JavaScript, or AI, you'll find structured tutorials, PDFs, and interactive content to support your learning journey.
           </p>
         </div>
       </section>
@@ -39,17 +39,23 @@ export default function Home() {
           <div className="feature-card">
             <FiBookOpen className="feature-icon" />
             <h3 className="feature-title">Comprehensive Learning</h3>
-            <p className="feature-description">Access a wide range of video tutorials, PDFs, and guides curated to help you master key college subjects</p>
+            <p className="feature-description">
+              Access a rich library of videos, PDFs, and guides to help you master technical subjects.
+            </p>
           </div>
           <div className="feature-card">
             <FiUsers className="feature-icon" />
             <h3 className="feature-title">Expert Guidance</h3>
-            <p className="feature-description">Learn from professors and experts who provide in-depth explanations and insights on various topics</p>
+            <p className="feature-description">
+              Learn from experienced instructors who break down complex topics into easy-to-follow lessons.
+            </p>
           </div>
           <div className="feature-card">
             <FiAward className="feature-icon" />
             <h3 className="feature-title">Structured Learning</h3>
-            <p className="feature-description">Follow a step-by-step approach to mastering subjects and preparing for exams</p>
+            <p className="feature-description">
+              Follow a clear, step-by-step curriculum to build your skills and prepare confidently for exams.
+            </p>
           </div>
         </div>
       </section>
@@ -57,7 +63,7 @@ export default function Home() {
       <div className="subjects-section">
         <h2>Explore Our Courses</h2>
         <p className="section-description">
-          Browse our comprehensive range of technical courses designed to build your skills from the ground up
+          Discover technical courses built to take you from beginner to pro, one step at a time.
         </p>
         <div className="subjects-grid">
           {SidebarData.filter(subject => subject.title !== "Home").map((subject, index) => (
@@ -75,7 +81,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      
+
       <div className="cta-banner">
         <h2>Ready to start your learning journey?</h2>
         <p>Join thousands of students already benefiting from Newton School's resources</p>
@@ -85,7 +91,6 @@ export default function Home() {
   );
 }
 
-// Helper function to get descriptions for subjects
 function getSubjectDescription(title) {
   const descriptions = {
     "DSA": "Master algorithms and data structures essential for coding interviews",
@@ -94,6 +99,6 @@ function getSubjectDescription(title) {
     "IKS": "Study information and knowledge systems for data management",
     "Pandas": "Analyze and manipulate data with Python's powerful library"
   };
-  
+
   return descriptions[title] || "Explore comprehensive materials and resources";
 }
